@@ -1,0 +1,27 @@
+{
+	"name": "kraken-css",
+	"version": "13.0.0",
+	"description": "A lightweight CSS boilerplate for front-end developers.",
+	"main": "./dist/main.css",
+	"author": {
+		"name": "Chris Ferdinandi",
+		"url": "http://gomakethings.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/cferdinandi/kraken"
+	},
+	"scripts": {
+		"clean": "rm -rf dist",
+		"cleanwin": "cmd /c if exist dist rmdir /s /q dist",
+		"css": "node sass.js",
+		"docs": "node docs.js",
+		"build": "npm run clean && npm run css && npm run docs",
+		"buildwin": "cmd /c npm run cleanwin && npm run css && npm run docs"
+	},
+	"devDependencies": {
+		"marked": "^1.0.0",
+		"sass": "^1.26.5"
+	}
+}
